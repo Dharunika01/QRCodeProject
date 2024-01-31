@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background-color: aqua;
+}
+.container{
+    max-width: 400px;
+    height: 230px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 2px 2px 30px 1px #636975;
+    background-color: palevioletred;
+}
+.container.active{
+    height: 580px;
+}
+.container h1{
+    text-align: center;
+    color: blue;
+}
+.container .form{
+    margin: 20px 0;
+}
+.form :where(input,button){
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 20px;
+    border: 1px solid #999;
+}
+.form button{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    background: #22a6b3;
+    border: none;
+}
+.form .saveQr{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 55px;
+    background: #043566;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.form .qr-code{
+    margin-top: 30px;
+    opacity: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: white;
+}
+.qr-code img{
+    width: 200px;
+}
+.container .saveQr{
+    opacity: 0;
+}
+.container.active .qr-code{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.container.active .saveQr{
+    opacity: 1;
+    transform: opacity 0.9s;
+}
